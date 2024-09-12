@@ -7,8 +7,22 @@
 </head>
 <body>
     <div id="root"></div>
+    
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+    <script>
+        //Creating a element is core thing for react  and this createElement function is comming from react and first learing src link  in the above cdn file
+
+        const heading=React.createElement('h1',{},"Hello world from react")  //this h1  tag is created here
+        const root=ReactDOM.createRoot(document.getElementById('root'));
+
+        //now we can render this created element with root
+        root.render(heading)
+        
+
+    </script>
 </body>
 </html>
