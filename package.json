@@ -1,0 +1,14 @@
+{
+  "name": "namasthereactcourse",
+  "version": "1.0.0",
+  "description": "This is namasthe react from Aksay",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Amindu Sathsara",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
