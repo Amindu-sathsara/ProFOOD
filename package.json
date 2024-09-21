@@ -4,6 +4,8 @@
   "description": "This is namasthe react from Aksay",
  
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "Amindu Sathsara",

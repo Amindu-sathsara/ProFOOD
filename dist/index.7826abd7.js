@@ -2956,39 +2956,6 @@ var _react = require("react"); // Correct import for React
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client"); // Correct import for ReactDOM
 var _clientDefault = parcelHelpers.interopDefault(_client);
-// Creating an element using React.createElement
-const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading1",
-    example: "more thing"
-}, "Hello world from React");
-const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-// Uncomment this to render heading
-// root.render(heading);
-console.log(heading); // This will log the React element to the console
-// Creating nested React elements
-const parent = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "child"
-}, /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "H1 tag is here now"));
-root.render(parent); // This will render the parent
-// Creating sibling HTML tags inside nested React elements
-const parent2 = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "parent"
-}, [
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        id: "child1"
-    }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "H1 tag is here now"),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {}, "H2 tag is here now")
-    ]),
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        id: "child2"
-    }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h3", {}, "H3  tag is a here now"),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h4", {}, "H4 tag is a here now")
-    ])
-]);
-const root2 = (0, _clientDefault.default).createRoot(document.getElementById("root2"));
-root2.render(parent2);
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
