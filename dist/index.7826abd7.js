@@ -2958,51 +2958,72 @@ var _react = require("react"); // Correct import for React
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client"); // Correct import for ReactDOM
 var _clientDefault = parcelHelpers.interopDefault(_client);
-//Create Component called Title
-const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "title",
-        children: "Title of the components"
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 10,
-        columnNumber: 20
-    }, undefined);
-_c = Title;
-//creating another component called HeadingComponent and add above  =Smart people like interviewer mentioned that as composition 
+//Create react element and add it inside the react components 
+const reactElem1 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+    children: "I am a react Element "
+}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 10,
+    columnNumber: 19
+}, undefined);
+const age = 21;
+//Adding react element into the components                  -(also noted that inside jsx using curly brackets we can write any javascript code )
 const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "container",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 17,
-                columnNumber: 9
-            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "composition",
                 tabIndex: "5",
                 children: "heading tag for the components"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 18,
+                lineNumber: 15,
+                columnNumber: 9
+            }, undefined),
+            "That boy is :" + age
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 14,
+        columnNumber: 5
+    }, undefined);
+_c = HeadingComponent;
+// Lets create another component  called SuperComponent and  then add reactElem1 and HeadingComponent inside it
+const SuperComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "composition",
+                tabIndex: "5",
+                children: "heading tag for the  Super components"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 26,
+                columnNumber: 9
+            }, undefined),
+            reactElem1,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 28,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 16,
+        lineNumber: 25,
         columnNumber: 5
     }, undefined);
-_c1 = HeadingComponent;
+_c1 = SuperComponent;
 //lets create root for above components
 const root = (0, _clientDefault.default).createRoot(document.getElementById("rootForComponent"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SuperComponent, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 25,
+    lineNumber: 33,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
-$RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "HeadingComponent");
+$RefreshReg$(_c, "HeadingComponent");
+$RefreshReg$(_c1, "SuperComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
