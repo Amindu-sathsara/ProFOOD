@@ -6,29 +6,21 @@ import React from 'react';  // Correct import for React
 import ReactDOM from 'react-dom/client';  // Correct import for ReactDOM
 
 
-//React.createElement=>ReactElement(Js-Object)=> then -> ReactElement(render)
-const heading = React.createElement("h1",{id:"heading"},"Namasthe react 💡💡");
+//Create Component called Title
+const Title = ()=>(<h1 className="title">Title of the components</h1>);
 
 
-const root =ReactDOM.createRoot( document.getElementById("root2"));
-root.render(heading);
+//creating another component called HeadingComponent and add above  =Smart people like interviewer mentioned that as composition 
+
+const HeadingComponent=()=>(
+    <div id="container">
+        <Title/> 
+        <h1 className="composition" tabIndex="5">heading tag for the components</h1> 
 
 
-//Jsx transfiled before it reached the js =>Parcel-->Babel
-//Jsx =>React transfiles it to React.createElement =>ReactElewment==Wich is js Object and =>HTML element (render)
+    </div>)
 
-//JSX is HTML-like or XML-like element not the exact one 
-/*const jsxHeading =<h1>Here I am creatd react heading element using JSX syntax </h1>
-console.log(jsxHeading); 
-
-const root2=ReactDOM.createRoot(document.getElementById("root2"));
-root2.render(root2);*/
-
-const Heading2=()=>{
-    <h1>Here , I am creating react Element</h1>
-}
-
-
-
-
+//lets create root for above components
+const root=ReactDOM.createRoot(document.getElementById("rootForComponent"));
+root.render(<HeadingComponent/>);
 

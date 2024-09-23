@@ -2958,31 +2958,51 @@ var _react = require("react"); // Correct import for React
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client"); // Correct import for ReactDOM
 var _clientDefault = parcelHelpers.interopDefault(_client);
-//React.createElement=>ReactElement(Js-Object)=> then -> ReactElement(render)
-const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading"
-}, "Namasthe react \uD83D\uDCA1\uD83D\uDCA1");
-const root = (0, _clientDefault.default).createRoot(document.getElementById("root2"));
-root.render(heading);
-//Jsx transfiled before it reached the js =>Parcel-->Babel
-//Jsx =>React transfiles it to React.createElement =>ReactElewment==Wich is js Object and =>HTML element (render)
-//JSX is HTML-like or XML-like element not the exact one 
-/*const jsxHeading =<h1>Here I am creatd react heading element using JSX syntax </h1>
-console.log(jsxHeading); 
-
-const root2=ReactDOM.createRoot(document.getElementById("root2"));
-root2.render(root2);*/ const Heading2 = ()=>{
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Here , I am creating react Element"
+//Create Component called Title
+const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        className: "title",
+        children: "Title of the components"
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 28,
+        lineNumber: 10,
+        columnNumber: 20
+    }, undefined);
+_c = Title;
+//creating another component called HeadingComponent and add above  =Smart people like interviewer mentioned that as composition 
+const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 17,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "composition",
+                tabIndex: "5",
+                children: "heading tag for the components"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 18,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 16,
         columnNumber: 5
     }, undefined);
-};
-_c = Heading2;
-var _c;
-$RefreshReg$(_c, "Heading2");
+_c1 = HeadingComponent;
+//lets create root for above components
+const root = (0, _clientDefault.default).createRoot(document.getElementById("rootForComponent"));
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 25,
+    columnNumber: 13
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "HeadingComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
