@@ -36,6 +36,19 @@
 -Read more about from browserList.dev web site 
 
 
+# Code beautifier extesion that Akshay Saini Sir Suggest Us
+1.ES lint
+2.Better Comments 
+
+
+# how the react is work behind the scence of jsx world 
+
+Jsx transfiled before it reached the js =>Parcel-->Babel
+Jsx =>React transfiles it to React.createElement =>ReactElewment==Wich is js Object and =>HTML element (render)
+
+JSX is HTML-like or XML-like element not the exact one 
+
+
 
 
 

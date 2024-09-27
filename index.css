@@ -1,0 +1,54 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    border:solid black;
+}
+
+#logo{
+    width:100px;
+    height:100px;
+}
+
+.nav-items>ul{
+    display:flex;
+    list-style: none;
+
+
+
+}
+.nav-items>ul>li{
+    padding: 10px;
+    margin:10px;
+    font-size: 20px;
+}
+
+.restaurant-card{
+    width:200px;
+    height:320px;
+    padding:2px;
+    margin:5px;
+    background-color: aliceblue;
+    
+}
+.restaurant-card:hover{
+    border:1px solid rgb(100, 78, 78);
+    cursor: pointer;
+    background-color: rgb(4, 72, 136);
+}
+
+.search-container{
+    padding:10px;
+}
+
+.res-card-img{
+    width: 190px;
+    margin:5px;
+}
+
+.restaurant-container{
+    padding :5px;
+    display:flex;
+    flex-wrap:wrap; 
+    
+    
+}
