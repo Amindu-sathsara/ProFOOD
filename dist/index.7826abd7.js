@@ -3047,57 +3047,86 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
     }, undefined);
 };
 _c = HeaderSection;
-//I can even write some piece of css code like following 
-const styleCard = {
-    backgroundColor: "gray"
-} // in here Also What is happening is , this is also just a js object and inside it we have been written cszs like syntax
-;
-const RestaurantCard = ()=>{
+const resObj = {
+    "id": 1,
+    "name": "Sunset Bistro",
+    "description": "Italian, Fast Food, Pizza",
+    "rating": 4.7,
+    "location": "123 Ocean Drive, Mumbai, India",
+    "image": "https://img.freepik.com/free-photo/happy-waiter-serving-food-group-cheerful-friends-pub_637285-12525.jpg?t=st=1727345365~exp=1727348965~hmac=466dae918f61f9407cd35d11af723b1e1e7bfe1a7a7e071d632b3cd8993150f4&w=740",
+    "priceRange": "$$",
+    "deliveryTime": "30 mins",
+    "isAvailable": true,
+    "discount": "20% OFF on all orders above \u20B9500",
+    "menuItems": [
+        {
+            "itemId": 101,
+            "itemName": "Margherita Pizza",
+            "price": 299,
+            "image": "https://example.com/images/margherita-pizza.jpg",
+            "description": "Classic Italian pizza with fresh tomatoes and basil."
+        },
+        {
+            "itemId": 102,
+            "itemName": "Garlic Bread",
+            "price": 149,
+            "image": "https://example.com/images/garlic-bread.jpg",
+            "description": "Crispy garlic bread with a side of dipping sauce."
+        }
+    ],
+    "orderLink": "https://example.com/order/sunset-bistro",
+    "offers": "Use code PIZZA20 for additional 20% OFF"
+};
+const RestaurantCard = (props)=>{
+    const { resData } = props; //inside the  jsx element resData should be the name of the props 
+    console.log(props);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-card",
-        style: styleCard,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "res-card-img",
                 alt: "restaurant card image is over there",
-                src: "https://img.freepik.com/free-photo/happy-waiter-serving-food-group-cheerful-friends-pub_637285-12525.jpg?t=st=1727345365~exp=1727348965~hmac=466dae918f61f9407cd35d11af723b1e1e7bfe1a7a7e071d632b3cd8993150f4&w=740"
+                src: resData.image
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 55,
+                lineNumber: 85,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Restaurant Name"
+                children: resData.name
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 56,
+                lineNumber: 86,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Rating: 4.5/5"
-            }, void 0, false, {
+                children: [
+                    " ",
+                    resData.rating
+                ]
+            }, void 0, true, {
                 fileName: "App.js",
-                lineNumber: 57,
+                lineNumber: 87,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Address: 123 Main St, City, State"
+                children: resData.description
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 58,
+                lineNumber: 88,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 children: "Order Now"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 59,
+                lineNumber: 89,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 54,
+        lineNumber: 84,
         columnNumber: 9
     }, undefined);
 };
@@ -3111,32 +3140,27 @@ const Body = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 67,
+                lineNumber: 97,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 71,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 72,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                    resData: resObj
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 101,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 70,
+                lineNumber: 100,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 66,
+        lineNumber: 96,
         columnNumber: 9
     }, undefined);
 };
@@ -3147,18 +3171,18 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderSection, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 84,
+                lineNumber: 114,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 85,
+                lineNumber: 115,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 83,
+        lineNumber: 113,
         columnNumber: 12
     }, undefined);
 };
@@ -3167,7 +3191,7 @@ _c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("rootForComponent"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 93,
+    lineNumber: 123,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
