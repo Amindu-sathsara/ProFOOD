@@ -1,5 +1,19 @@
-# Namasthe react episode one full code is push to the git 
+# //Planning for food ordering app development 
+* Header
+    * Logo
+    * Nav Items
+*Body
+    * Search
+    * Restaurant container
+        * Restaurant cards
+             *img
+             *Name, star rating ,cuision, delivery type 
 
+*Footer
+    * Copyrights
+    * Links 
+    * Address
+    * Contacts
 
 
 
