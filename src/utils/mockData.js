@@ -155,7 +155,7 @@ const resList=[
         "id": 6,
         "name": "Taco Fiesta",
         "description": "Mexican, Tacos, Fast Food",
-        "rating": 4.4,
+        "rating": 3.4,
         "location": "987 Fiesta Street, Mexico City, Mexico",
         "image": "https://img.freepik.com/free-photo/close-up-delicious-tacos_23-2150831111.jpg?t=st=1727842501~exp=1727846101~hmac=01ad8131e876627b2de586a34ff5baef364eea9f39527fbb9141bc72a9843e28&w=740",
         "priceRange": "$",

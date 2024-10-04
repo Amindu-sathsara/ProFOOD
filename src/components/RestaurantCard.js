@@ -6,7 +6,7 @@ const RestaurantCard=(props)=>{   // form the campornets props in JSX come over 
           <div className="restaurant-card" >
               <img className="res-card-img" alt="restaurant card image is over there" src={resData.image}/>
               <h2>{resData.name}</h2>
-              <p> {resData.rating} ⭐⭐⭐</p>
+              <p> {resData.rating}</p>
               <p>{resData.description}</p>
               <button>Order Now</button>
           </div>

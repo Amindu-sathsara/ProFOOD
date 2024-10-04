@@ -64,6 +64,35 @@ JSX is HTML-like or XML-like element not the exact one
 
 
 
+# There are two types of Import and Export in React
+- 1.Defualt import /excport 
+
+  ex: export default component;
+      import Component from "path";
 
 
 
+- 2.Named export/import 
+  ex: Export const Component ;
+      import {component} from "path";
+
+
+
+
+# React hooks - just a normal JS functions that written by facebook developers 
+(those utility functions we get to our project from node modules )
+
+there are two most important React hooks
+1.useState() = this is use to create super powerfull react state variables
+
+2.useEffect() = this is use to
+
+
+# Use State is an super Power full variable 
+search about the ,
+    1.Reconcilitiation Algorithm or React Fiber -Which is the core concept of react 
+    2.Diff algorithm in React 
+
+
+# Virtusl Dom :
+- Virtual DOM is a representation of actual DOM 
