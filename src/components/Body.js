@@ -43,11 +43,15 @@ const Body=()=>{
     }8*/
 
     //Let's add Shrimmer UI to add better UX to the web page 
-    if(resList1.length===0){
-        return <Shrimmer/>
-    }
+    //Sometime interviewer might ask what is conditional rendering and this is what it is 😊😊
+    /*if(resList1.length===0){
+        return <Shrimmer/>          //and this is called conditional  rendering 
 
-    return (
+    }*/
+
+    
+
+    return resList1.length===0 ? <Shrimmer/> : (
         <div className="body">
             <div className="search-container">
                 Search
