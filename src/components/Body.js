@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState,useEffect } from "react";
 
 import resList from "../utils/mockData";
+import Shrimmer from "./Shrimmer";
 
 
 
@@ -30,10 +31,22 @@ const Body=()=>{
         const jsonData=await response.json();
         console.log(jsonData);
         //console.log("Remove the link that used to fetch data")
+
+        //this is optional chaining 
         setResList1(jsonData?.carts[19]?.products);
-        
           
     }
+
+    //this is not a good UX in ,modern world .
+    /*if(resList1.length===0){
+        return <h2>Loading...</h2>
+    }8*/
+
+    //Let's add Shrimmer UI to add better UX to the web page 
+    if(resList1.length===0){
+        return <Shrimmer/>
+    }
+
     return (
         <div className="body">
             <div className="search-container">
