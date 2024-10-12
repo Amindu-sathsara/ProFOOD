@@ -6,11 +6,13 @@ import Shrimmer from "./Shrimmer";
 
 
 
-const Body=()=>{
+const Body=()=>{    
 
-    
     //Local state variable -super powerful variables 
     const [resList1,setResList1]=useState([]);
+
+    //Anothor State variable for -keep all restuarant card data that bring here via API 
+    const [allRestaurantData,setAllRestaurantData]=useState([]);
 
     //this one is used to get the input text value from search text 
     const [searchText,setSearchText]=useState("");
@@ -29,7 +31,7 @@ const Body=()=>{
         console.log("useEffect is called");
     },[])
 
-
+    console.log("This lin should printed again and again when render")
     const fetchData=async ()=>{
         const response=await fetch("https://dummyjson.com/carts");
         const jsonData=await response.json();
@@ -37,6 +39,7 @@ const Body=()=>{
         //console.log("Remove the link that used to fetch data")
 
         //this is optional chaining 
+        setAllRestaurantData(jsonData?.carts[19]?.products);
         setResList1(jsonData?.carts[19]?.products);
           
     }
@@ -65,9 +68,9 @@ const Body=()=>{
                 <button className="search-btn" onClick={()=>{
                     //Filter the restaurant card and update the UI 
                     console.log(searchText);
-                    const filteredResList = resList1.filter(
+                    const filteredResList = allRestaurantData.filter(
                         (rest1) => {
-                            return rest1.title.includes(searchText)
+                            return rest1.title.toLowerCase().includes(searchText.toLowerCase())
                         })
                 setResList1(filteredResList)
              }}
@@ -77,7 +80,7 @@ const Body=()=>{
             <div className="filter-container">
                 <button className="filter-btn" onClick={()=>{
 
-                    const filteredList=resList1.filter((res)=>res.quantity>=4
+                    const filteredList=allRestaurantData.filter((res)=>res.quantity>=4
                 );
                 
                 setResList1(filteredList);
