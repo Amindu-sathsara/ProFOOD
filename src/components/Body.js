@@ -8,8 +8,12 @@ import Shrimmer from "./Shrimmer";
 
 const Body=()=>{
 
+    
     //Local state variable -super powerful variables 
     const [resList1,setResList1]=useState([]);
+
+    //this one is used to get the input text value from search text 
+    const [searchText,setSearchText]=useState("");
     
     /*
     to understand what is happening in the useState -use below wierd syntax 
@@ -54,7 +58,21 @@ const Body=()=>{
     return resList1.length===0 ? <Shrimmer/> : (
         <div className="body">
             <div className="search-container">
-                Search
+                <input type="text" className="search-input" placeholder="Search" value={searchText} 
+                onChange={(e)=>{
+                    setSearchText(e.target.value)
+                    }}/>
+                <button className="search-btn" onClick={()=>{
+                    //Filter the restaurant card and update the UI 
+                    console.log(searchText);
+                    const filteredResList = resList1.filter(
+                        (rest1) => {
+                            return rest1.title.includes(searchText)
+                        })
+                setResList1(filteredResList)
+             }}
+
+                >Search</button>
             </div>
             <div className="filter-container">
                 <button className="filter-btn" onClick={()=>{
