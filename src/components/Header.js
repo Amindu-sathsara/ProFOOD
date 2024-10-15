@@ -1,6 +1,6 @@
 import LOGO_IMG_URL from "../utils/constants";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 const Header=()=>{
     //let Login="Login"
@@ -13,9 +13,9 @@ const Header=()=>{
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/Contact">Contact us</Link></li>
                     <li>Cart</li>
                     <button className="login-btn" onClick={()=>{
                         LoginBtn==="Login"
