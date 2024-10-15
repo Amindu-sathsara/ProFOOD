@@ -96,3 +96,35 @@ search about the ,
 
 # Virtusl Dom :
 - Virtual DOM is a representation of actual DOM 
+
+
+
+
+
+# Episode 6:  😍😍😍😍😍😍
+
+  ➡️two types of architecture   -search about these things 
+ 1.Monolithic architecture   2.Microsservices architecture
+
+ (use different different tech stack to implement different microservices in the same application and then use different port and after that when deploy all microservices can seperate with  / and name )
+
+
+ 😎😎 there are two types of approaches to connect with backend and fetch data
+
+ 👀  Approach 01:    ➡️When the application is load 😊
+
+ Loads➡️ API room ➡️ Render        (As my understanding here What is happening is once we loads the page it automatically call the API and  render the UI accordingly)
+
+👀  Approach 02: (This approach is using in the React most of the time )
+
+
+💡💡What is fetch();
+fetch is a super powerfull function that given to us by js engine or browser ti fetch the data
+
+# use Effecft has three different ways to behavior according to the dependecy array in it's as arguments 
+
+ 1- without an dependency array -iy called useEffect when rendering component
+ 2.with an empty dependency array -only useEffect will called only one time - (in intial compoennt rendering)
+ 3.with an array of dependencies-if the dependency changes then for each changing time it called for use effect 
+ (note that all these time , when the initial component render then this will called for useEffect definatly )
+ 
