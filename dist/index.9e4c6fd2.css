@@ -9,6 +9,10 @@
   height: 100px;
 }
 
+.nav-items a {
+  text-decoration: none;
+}
+
 .nav-items > ul {
   list-style: none;
   display: flex;
@@ -87,8 +91,12 @@
 }
 
 @keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
   100% {
-    transform: translateX(100%);
+    background-position: 468px 0;
   }
 }
 
@@ -137,5 +145,176 @@
 .filter-container {
   margin: 10px;
   display: flex;
+}
+
+.restaurant-cardTwo {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.restaurant-header, .restaurant-content {
+  padding: 16px;
+}
+
+.menu-section, .price-section {
+  margin-bottom: 16px;
+}
+
+.price-row {
+  justify-content: space-between;
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.shimmer {
+  background: #f6f7f8 linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40% 100%) 0 0 / 800px 104px no-repeat;
+  animation-name: shimmer;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: relative;
+}
+
+.restaurant-name {
+  width: 75%;
+  height: 24px;
+}
+
+.menu-item {
+  width: 100%;
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.menu-item:last-child {
+  width: 75%;
+}
+
+.price-label {
+  width: 25%;
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.price-item {
+  width: 50%;
+  height: 16px;
+}
+
+.price-value {
+  width: 16%;
+  height: 16px;
+}
+
+.offer-button {
+  width: 100%;
+  height: 40px;
+}
+
+.menu {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.menu-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.img-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.menu-img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.menu-price {
+  color: #333;
+  background-color: #fffc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.menu-description {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.menu-order-btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  transition: background-color .3s;
+  display: block;
+}
+
+.menu-order-btn:hover {
+  background-color: #45a049;
+}
+
+ul {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+@media (width <= 480px) {
+  .menu {
+    padding: 10px;
+  }
+
+  .menu-title {
+    font-size: 20px;
+  }
+
+  .menu-price {
+    font-size: 16px;
+  }
+
+  .menu-description {
+    font-size: 14px;
+  }
+
+  .menu-order-btn {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

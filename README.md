@@ -128,3 +128,8 @@ fetch is a super powerfull function that given to us by js engine or browser ti 
  3.with an array of dependencies-if the dependency changes then for each changing time it called for use effect 
  (note that all these time , when the initial component render then this will called for useEffect definatly )
  
+
+
+ # there are two types of routing in web apps
+ 1-client side routing
+ 2-server side routing
