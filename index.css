@@ -359,3 +359,11 @@ li {
 }
 
 /* Restaurant menu Data adesciptive component css end here */
+
+
+.user-card{
+  padding:10px;
+  margin:10px;
+  border:solid black;
+  width: 300px;
+}
