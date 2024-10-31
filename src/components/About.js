@@ -21,7 +21,7 @@ export default About;
 //let's convert this one into class component
 
  import React from 'react';
-
+ import User from './User';
  class About extends React.Component {
    render() {
      return (
@@ -32,6 +32,7 @@ export default About;
          
          <UserClass name={"First-Amindu"} location={"Matara,Sri Lanka"} />
          <UserClass name={"Second-Nimal"} location={"Colombo,Sri Lanka"} />
+         <User name="Name come from functionnal component"/>
        </div>
      );
    }

@@ -133,3 +133,20 @@ fetch is a super powerfull function that given to us by js engine or browser ti 
  # there are two types of routing in web apps
  1-client side routing
  2-server side routing
+
+
+
+ # Episode 08-Let's get classy
+
+1.To add props to the route we just use constructor in there
+ constructor(props){
+    super(props); //What is the use of this super keyword and Why must we need this .
+
+ }
+
+
+ 2.If you need to update the state in class component then don't update the state variale directly
+ 
+
+ # Let's understand the life cycle of react class component
+ 
