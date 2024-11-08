@@ -368,3 +368,14 @@ li {
   width: 300px;
   
 }
+
+
+
+/* online status indicator colored dot css part is here */
+.online-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}

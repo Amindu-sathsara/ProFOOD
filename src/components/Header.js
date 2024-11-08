@@ -2,14 +2,20 @@ import LOGO_IMG_URL from "../utils/constants";
 import { useState } from "react";  //Later remove this  comment
 import { Link } from "react-router-dom";
 
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Header=()=>{
     //let Login="Login" here
     const [LoginBtn,setLoginBtn]=useState("Login");
+    const onlineStatus = useOnlineStatus();
 
+    
     return (
         <div className="header">
             <div className="logo-container">
-                <img id ="logo" src={LOGO_IMG_URL} alt="logo" />
+            <span className="online-status">{onlineStatus?"🟢":"🔴"}</span>
+            <img id ="logo" src={LOGO_IMG_URL} alt="logo" />
+                
             </div>
             <div className="nav-items">
                 <ul>

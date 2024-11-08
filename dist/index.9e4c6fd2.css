@@ -324,4 +324,12 @@ li {
   margin: 10px;
   padding: 10px;
 }
+
+.online-status {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: .5rem;
+  text-decoration: none;
+}
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
