@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';  // Correct import for ReactDOM
 import Header from './components/Header';
 import About from './components/About';
 import Contact from './components/Contact';
+import Cart from './components/Cart';
 import RestaurantMenu from './components/RestaurantMenu';
 import Error from './components/Error';
 //import RestaurantCard from './components/RestaurantCard';
@@ -40,9 +41,14 @@ const appRouter=createBrowserRouter([
                 "element": <Contact/>
             },
             {
+                "path": "/Cart",
+                "element":<Cart/>
+            },
+            {
                 "path": "/Restaurant/:resId",
                 "element": <RestaurantMenu/>
-            }
+            },
+            
 
         ],
         "errorElement": <Error/>

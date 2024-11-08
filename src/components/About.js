@@ -33,6 +33,7 @@ export default About;
          <UserClass name={"First-Amindu"} location={"Matara,Sri Lanka"} />
          <UserClass name={"Second-Nimal"} location={"Colombo,Sri Lanka"} />
          <User name="Name come from functionnal component"/>
+         
        </div>
      );
    }

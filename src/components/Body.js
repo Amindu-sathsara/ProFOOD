@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import resList from "../utils/mockData";
 import Shrimmer from "./Shrimmer";
 
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 
 const Body=()=>{    
@@ -56,6 +57,10 @@ const Body=()=>{
 
     }*/
 
+    const isOnline=useOnlineStatus();
+
+    
+    if(isOnline===false) return <h2>Looks like you are offline , Checks internet conncetion and try again </h2>
     
 
     return resList1.length===0 ? <Shrimmer/> : (

@@ -1,16 +1,17 @@
 import { useEffect ,useState} from "react";
 import ShrimmerTwo from "./ShrimmerTwo";
+import { useParams } from "react-router-dom";
 const RestaurantMenu = () => {
 
     const [resInfo, setResInfo] = useState(null);
-
+    const {Id}= useParams();
     useEffect(() => {
         fetchMenuData();
         
     }, []);
 
     const fetchMenuData = async () => {
-        const response = await fetch("https://dummyjson.com/products");
+        const response = await fetch({MENU_API_URL});
         const jsonData = await response.json();
         console.log(jsonData);
         console.log(jsonData.products[0]);
