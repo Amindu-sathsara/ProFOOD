@@ -1,3 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .header{
     display:flex;
     justify-content: space-between;
@@ -379,3 +385,5 @@ li {
   margin-left: 0.5rem;
   text-decoration: none;
 }
+
+/* Adding tailwind css goes here */

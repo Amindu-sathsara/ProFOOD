@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {HigherOrderRestaurantCard} from "./RestaurantCard";
 import { useState,useEffect } from "react";
 
 import resList from "../utils/mockData";
@@ -17,6 +17,9 @@ const Body=()=>{
 
     //this one is used to get the input text value from search text 
     const [searchText,setSearchText]=useState("");
+
+    //This one is used to save higher order component
+    const EnhancedRestaurantCard=HigherOrderRestaurantCard(RestaurantCard);
     
     /*
     to understand what is happening in the useState -use below wierd syntax 
@@ -95,9 +98,14 @@ const Body=()=>{
             
             </div>
             <div className="restaurant-container">
-                {resList1.map((restaurant)=>(
-                    <RestaurantCard key={restaurant.id} resData={restaurant}/>
-                ))}
+                {resList1.map((restaurant)=>
+                    restaurant.quantity>=4 ? (
+                        <EnhancedRestaurantCard key={restaurant.id} resData={restaurant} />
+                    ) : (
+                        <RestaurantCard key={restaurant.id} resData={restaurant} />
+                    )
+                
+                ) }
                 
             </div>
         </div>
