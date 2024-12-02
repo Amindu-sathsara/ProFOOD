@@ -256,10 +256,6 @@ img, video {
   margin: .5rem;
 }
 
-.rounded-lg {
-  border-radius: .5rem;
-}
-
 .rounded-md {
   border-radius: .375rem;
 }
