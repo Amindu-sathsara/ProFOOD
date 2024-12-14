@@ -150,3 +150,8 @@ fetch is a super powerfull function that given to us by js engine or browser ti 
 
  # Let's understand the life cycle of react class component
  
+
+ # Just install react developer tool chrome extension 
+ - it gives you super powers to build react project
+
+ 
