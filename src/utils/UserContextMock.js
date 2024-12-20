@@ -1,6 +1,7 @@
 import { createContext } from "react";
 const UserContextMock =createContext({
-    loggedInUser:"default USER"
+    loggedInUser:"default USER",
+   
 });
 
 export default UserContextMock;

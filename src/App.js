@@ -18,7 +18,7 @@ const Mart=lazy(()=>import("./components/Mart"));
 const AppLayout=()=>{
 
     //user information updates here ,
-    const [userInfo,setUserInfo]=useState();
+    const [userInfo,setUserInfo]=useState('');
 
 
     //Let's create some authentication logic here  - But for this particular moment I don't  call for the real api just use mockData to check for the front end logic 
@@ -36,7 +36,7 @@ const AppLayout=()=>{
     
 
     return (
-    <UserContextMock.Provider value={{loggedInUser:userInfo}}>
+    <UserContextMock.Provider value={{loggedInUser:userInfo,setUserInfo}}>
     <div className="app">
         <Header/>
         <Outlet/>

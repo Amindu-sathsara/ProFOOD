@@ -1,10 +1,13 @@
 import RestaurantCard, {HigherOrderRestaurantCard} from "./RestaurantCard";
-import { useState,useEffect } from "react";
+import { useState,useEffect ,useContext} from "react";
 
 import resList from "../utils/mockData";
 import Shrimmer from "./Shrimmer";
 
 import useOnlineStatus from "../utils/useOnlineStatus"
+
+
+import UserContextMock from "../utils/UserContextMock";
 
 
 const Body=()=>{    
@@ -20,6 +23,8 @@ const Body=()=>{
 
     //This one is used to save higher order component
     const EnhancedRestaurantCard=HigherOrderRestaurantCard(RestaurantCard);
+
+    
     
     /*
     to understand what is happening in the useState -use below wierd syntax 
@@ -65,15 +70,16 @@ const Body=()=>{
     
     if(isOnline===false) return <h2>Looks like you are offline , Checks internet conncetion and try again </h2>
     
+    const {loggedInUser,setUserInfo}=useContext(UserContextMock);
 
     return resList1.length===0 ? <Shrimmer/> : (
         <div className="body">
-            <div className="search-container">
-                <input type="text" className="search-input" placeholder="Search" value={searchText} 
+            <div className="flex items-center space-x-4">
+                <input type="search-input flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent" className="search-input" placeholder="Search" value={searchText} 
                 onChange={(e)=>{
                     setSearchText(e.target.value)
                     }}/>
-                <button className="search-btn" onClick={()=>{
+                <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" onClick={()=>{
                     //Filter the restaurant card and update the UI 
                     console.log(searchText);
                     const filteredResList = allRestaurantData.filter(
@@ -85,6 +91,14 @@ const Body=()=>{
 
                 >Search</button>
             </div>
+
+            <div className="usernames-container">
+                <label className="p-2">Username:</label>
+                <input type="text" className="username-input" value={loggedInUser} onChange={(e)=>setUserInfo(e.target.value)
+                }
+                />
+            </div>
+
             <div className="filter-container">
                 <button className="filter-btn" onClick={()=>{
 
