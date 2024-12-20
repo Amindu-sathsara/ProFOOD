@@ -22,6 +22,7 @@ export default About;
 
  import React from 'react';
  import User from './User';
+ import UserContextMock from "../utils/UserContextMock";
  class About extends React.Component {
    render() {
      return (
@@ -33,8 +34,13 @@ export default About;
          <UserClass name={"First-Amindu"} location={"Matara,Sri Lanka"} />
          <UserClass name={"Second-Nimal"} location={"Colombo,Sri Lanka"} />
          <User name="Name come from functionnal component"/>
-         
+         <div className="font-bold">
+          <UserContextMock.Consumer> 
+            {({loggedInUser}) =><h1 className="px-4  font-red">Hello {loggedInUser}</h1>}   
+          </UserContextMock.Consumer>
+         </div>
        </div>
+       
      );
    }
  }
