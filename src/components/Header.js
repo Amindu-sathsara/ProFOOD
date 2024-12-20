@@ -1,14 +1,19 @@
 import LOGO_IMG_URL from "../utils/constants";
-import { useState } from "react";  //Later remove this  comment
+import { useState,useContext } from "react";  //Later remove this  comment
 import { Link } from "react-router-dom";
 
 import useOnlineStatus from "../utils/useOnlineStatus";
+
+import UserContextMock from "../utils/UserContextMock";
 
 const Header=()=>{
     //let Login="Login" here
     const [LoginBtn,setLoginBtn]=useState("Login");
     const onlineStatus = useOnlineStatus();
 
+    //Mock User Context
+    const {loggedInUser}=useContext(UserContextMock);
+    console.log(loggedInUser);
     
     return (
         <div className="header">
@@ -30,6 +35,7 @@ const Header=()=>{
                          setLoginBtn("Login");
                         //console.log(LoginBtn);
                     }}>{LoginBtn}</button>
+                    <li className="px-4 font-bold">{loggedInUser}</li>
                 </ul>
             </div>
         </div>
