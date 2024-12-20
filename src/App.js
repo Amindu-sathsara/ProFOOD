@@ -1,5 +1,5 @@
 
-import React, { lazy, Suspense } from 'react';  // Correct import for React
+import React, { lazy, Suspense, useState,useEffect } from 'react';  // Correct import for React
 import ReactDOM from 'react-dom/client';  // Correct import for ReactDOM
 import Header from './components/Header';
 import About from './components/About';
@@ -11,16 +11,38 @@ import Error from './components/Error';
 //import RestaurantCard from './components/RestaurantCard';
 import Body from './components/Body';
 
+import UserContextMock from './utils/UserContextMock';
+
 import { createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom';
 const Mart=lazy(()=>import("./components/Mart"));
 const AppLayout=()=>{
+
+    //user information updates here ,
+    const [userInfo,setUserInfo]=useState();
+
+
+    //Let's create some authentication logic here  - But for this particular moment I don't  call for the real api just use mockData to check for the front end logic 
+    useEffect(()=>{
+        //Make API call and send user name and password 
+        //Get the relevant data 
+        const data={
+            name:"Amindu",
+            
+            
+        };
+        setUserInfo(data.name);
+    },[]);
+    
     
 
-    return <div className="app">
+    return (
+    <UserContextMock.Provider value={{loggedInUser:userInfo}}>
+    <div className="app">
         <Header/>
         <Outlet/>
         
     </div>
+    </UserContextMock.Provider>);
     
 }
 
