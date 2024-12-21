@@ -6,6 +6,8 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 import UserContextMock from "../utils/UserContextMock";
 
+
+import { useSelector } from "react-redux";
 const Header=()=>{
     //let Login="Login" here
     const [LoginBtn,setLoginBtn]=useState("Login");
@@ -15,6 +17,8 @@ const Header=()=>{
     const {loggedInUser}=useContext(UserContextMock);
     console.log(loggedInUser);
     
+    //subscribing to the store using selector 
+    const cartItems=useSelector((store)=>store.cart.items);
     return (
         <div className="header">
             <div className="logo-container">
@@ -27,7 +31,7 @@ const Header=()=>{
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/About">About</Link></li>
                     <li><Link to="/Contact">Contact us</Link></li>
-                    <li><Link to="/Cart">Cart</Link></li>
+                    <li className="p-2 font-bold m-2">cart🛒{cartItems.length} (Items) </li>
                     <li><Link to="/Mart">Mart</Link></li>
                     <button className="login-btn" onClick={()=>{
                         LoginBtn==="Login"

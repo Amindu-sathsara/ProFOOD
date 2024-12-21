@@ -155,3 +155,11 @@ fetch is a super powerfull function that given to us by js engine or browser ti 
  - it gives you super powers to build react project
 
  
+# Redux -  React redux toolkit (It is the latest way to work with react )
+-install react js tool kit and react redux - we need thsee two different libraries 
+-Build our store 
+-Connect our store to our app 
+-Slice 
+-dispatch (action)
+-selector 
+

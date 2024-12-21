@@ -14,6 +14,9 @@ import Body from './components/Body';
 import UserContextMock from './utils/UserContextMock';
 
 import { createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom';
+
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 const Mart=lazy(()=>import("./components/Mart"));
 const AppLayout=()=>{
 
@@ -36,13 +39,15 @@ const AppLayout=()=>{
     
 
     return (
-    <UserContextMock.Provider value={{loggedInUser:userInfo,setUserInfo}}>
+    <Provider store={appStore}>
+        <UserContextMock.Provider value={{loggedInUser:userInfo,setUserInfo}}>
     <div className="app">
         <Header/>
-        <Outlet/>
-        
+        <Outlet/> 
     </div>
-    </UserContextMock.Provider>);
+    </UserContextMock.Provider>
+    </Provider>
+    );
     
 }
 
