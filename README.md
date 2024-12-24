@@ -163,3 +163,21 @@ fetch is a super powerfull function that given to us by js engine or browser ti 
 -dispatch (action)
 -selector 
 
+
+
+# Types of testing ... (Developer testing)
+-Unit testing 
+-Integration testing
+-End to end testing (e2e testing   )
+
+
+
+# Setting up testing in our app 
+-Installing react testing library 
+-install jest to our app 
+-Installed babel dependencies
+-configure babel 
+
+-to slove conflict betweeen default parcel dependencies and our own custom parcel dependencies just add .parcelrc in our code base and copy the content from offcial parcel documentation 
+
+-jest configuration added => npx jest --init 
