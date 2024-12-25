@@ -181,3 +181,19 @@ fetch is a super powerfull function that given to us by js engine or browser ti 
 -to slove conflict betweeen default parcel dependencies and our own custom parcel dependencies just add .parcelrc in our code base and copy the content from offcial parcel documentation 
 
 -jest configuration added => npx jest --init 
+
+
+- Install npm i -D @babel/preset-react to make JSX works in the test cases, (npm i -D npm i -D @babel/preset-react)
+
+installing this :npm install --save-dev @testing-library/jest-dom
+
+(All the configurations are complete to write test cases )
+
+
+# some info about test cases syntax
+
+-It uses  function called   describe and that uses just in order to grop the test cases 
+-describe can be nested and also it contains multiple gruops also 
+-some of the guys just uses keyword of  (it)  instead of test 
+
+
