@@ -1,6 +1,6 @@
 const RestaurantCard=(props)=>{   // form the campornets props in JSX come over here and make sure it comes to props as js object 
     const {resData}=props;   //inside the  jsx element resData should be the name of the props 
-    console.log(props);
+    console.log(resData);
   
       return (
           <div className="restaurant-card" >
