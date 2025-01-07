@@ -197,3 +197,9 @@ installing this :npm install --save-dev @testing-library/jest-dom
 -some of the guys just uses keyword of  (it)  instead of test 
 
 
+
+
+# some important concepts related to testing library related to react 
+
+-If we need to do onclick kind of things from our code base it self we can use Event called FireEvent and it comes from the react testing library
+
