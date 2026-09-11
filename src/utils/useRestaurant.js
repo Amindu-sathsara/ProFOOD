@@ -11,12 +11,14 @@ const useRestaurant=(Id)=>{
 
         fetchMenuData();
 
+
         
     },[])
 
     const fetchMenuData =async ()=>{
         const data = await fetch(MENU_API_URL);
         const jsonData= await data.json();
+        console.log("Fetched data from api", jsonData);
 
         setResInfo(jsonData);
 

@@ -203,3 +203,12 @@ installing this :npm install --save-dev @testing-library/jest-dom
 
 -If we need to do onclick kind of things from our code base it self we can use Event called FireEvent and it comes from the react testing library
 
+
+
+# Just finished the unit testing part
+-Now there is a super cool stuff to know that fetch is not a part of core javascript
+- So the What is behind the scence is fetch is a superpower that given by browsers to us
+-And not by jsdom 
+
+
+-so if we need to test this we have to write our own exact dummy of fetch function with 

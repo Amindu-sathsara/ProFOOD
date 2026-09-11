@@ -4,26 +4,26 @@ import { useParams } from "react-router-dom";
 const RestaurantMenu = () => {
 
     const [resInfo, setResInfo] = useState(null);
-    const {Id}= useParams();
+    const {resId}= useParams();
     useEffect(() => {
         fetchMenuData();
         
     }, []);
 
     const fetchMenuData = async () => {
-        const response = await fetch({MENU_API_URL});
+        const response = await fetch(`https://dummyjson.com/products/${resId}`);
         const jsonData = await response.json();
-        console.log(jsonData);
-        console.log(jsonData.products[0]);
+        console.log("Menu of the restaurant the particular",jsonData);
+        
         setResInfo(jsonData);
     }
     
 
     if (resInfo === null) return <ShrimmerTwo/> ;
     //const {products} = resInfo;
-    const {title, description, price,thumbnail} = resInfo?.products[0] || {};
+    const {title, description, price,thumbnail} = resInfo || {};
     console.log("Product list for menu is here:")
-
+    console.log(resInfo);
     console.log(title);
 
     //const {reviews} = resInfo?.products[0] || {};
@@ -31,7 +31,7 @@ const RestaurantMenu = () => {
 
     //console.log(reviews[0]?.reating);
 
-    const {rating,comment,reviewerName}=resInfo?.products[0].reviews[0] || {};
+    const {rating,comment,reviewerName}=resInfo?.products?.[0]?.reviews?.[0] || {};
 
     return (
         <div className="menu">

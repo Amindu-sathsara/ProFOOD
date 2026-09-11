@@ -24,17 +24,6 @@ const Body=()=>{
     //This one is used to save higher order component
     const EnhancedRestaurantCard=HigherOrderRestaurantCard(RestaurantCard);
 
-    
-    
-    /*
-    to understand what is happening in the useState -use below wierd syntax 
-                  const arr=useState(resList);
-                  const [resList2,setResList2]=arr;
-     
-             Or even above line can be breakdown like this ?
-                  const restList2=arr[0];
-                  const setResList=arr[1];
-                  */
     useEffect(()=>{
         fetchData();
         console.log("useEffect is called");
@@ -44,27 +33,16 @@ const Body=()=>{
     const fetchData=async ()=>{
         const response=await fetch("https://dummyjson.com/carts");
         const jsonData=await response.json();
-        console.log(jsonData);
+        console.log("Fetched data from api", jsonData);
         //console.log("Remove the link that used to fetch data")
 
         //this is optional chaining 
         setAllRestaurantData(jsonData?.carts[19]?.products);
-        setResList1(jsonData?.carts[19]?.products);
+        setResList1(jsonData?.carts[10]?.products);
           
     }
 
-    //this is not a good UX in ,modern world .
-    /*if(resList1.length===0){
-        return <h2>Loading...</h2>
-    }8*/
-
-    //Let's add Shrimmer UI to add better UX to the web page 
-    //Sometime interviewer might ask what is conditional rendering and this is what it is 😊😊
-    /*if(resList1.length===0){
-        return <Shrimmer/>          //and this is called conditional  rendering 
-
-    }*/
-
+   
     const isOnline=useOnlineStatus();
 
     
