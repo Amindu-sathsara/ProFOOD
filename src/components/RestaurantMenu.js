@@ -1,37 +1,31 @@
 import { useEffect ,useState} from "react";
 import ShrimmerTwo from "./ShrimmerTwo";
 import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 const RestaurantMenu = () => {
 
-    const [resInfo, setResInfo] = useState(null);
-    const {resId}= useParams();
-    useEffect(() => {
-        fetchMenuData();
-        
-    }, []);
-
-    const fetchMenuData = async () => {
-        const response = await fetch(`https://dummyjson.com/products/${resId}`);
-        const jsonData = await response.json();
-        console.log("Menu of the restaurant the particular",jsonData);
-        
-        setResInfo(jsonData);
-    }
+    const {resId} = useParams();
     
+    const resInfo = useRestaurantMenu(resId);
+    console.log("this is the resInfo",resInfo);
+
+   
 
     if (resInfo === null) return <ShrimmerTwo/> ;
     //const {products} = resInfo;
-    const {title, description, price,thumbnail} = resInfo || {};
+    const {title, description, price,thumbnail,rating,warrantyInformation,stock,returnPolicy} = resInfo || {};
     console.log("Product list for menu is here:")
-    console.log(resInfo);
+    console.log("that particulat component info",resInfo);
     console.log(title);
+
 
     //const {reviews} = resInfo?.products[0] || {};
     //.log(reviews);
 
     //console.log(reviews[0]?.reating);
 
-    const {rating,comment,reviewerName}=resInfo?.products?.[0]?.reviews?.[0] || {};
+    //const {rating,comment,reviewerName}=resInfo?.products?.[0]?.reviews?.[0] || {};
+    //console.log(rating,comment,reviewerName);
 
     return (
         <div className="menu">
@@ -45,9 +39,9 @@ const RestaurantMenu = () => {
             <ul>
                 <h3 className="menu-reviews">latest reviews of the customers</h3>
                 <li>{rating}</li>
-                <li>{comment}</li>
-                <li>{reviewerName}</li>
-                <li>Highely appriciated and Thank You for every feedback of the Customer 🤗🤗</li>
+                <li>{warrantyInformation}</li>
+                <li>{returnPolicy}</li>
+                <li>{stock} items is in stock </li>
             </ul>
         </div>
     );
