@@ -89,7 +89,7 @@ const Body=()=>{
 
             
             </div>
-            <div className="restaurant-container">
+            <div className="restaurant-container flex flex-wrap justify-between gap-4">
                 {resList1.map((restaurant)=>
                     restaurant.quantity>=4 ? (
                         <EnhancedRestaurantCard key={restaurant.id} resData={restaurant} />
