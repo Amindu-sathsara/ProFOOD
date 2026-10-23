@@ -1,4 +1,6 @@
 import { Link, useInRouterContext } from "react-router-dom";
+import { addItem } from "../utils/cartSlice";
+import appStore from "../utils/appStore";
 
 const RestaurantCard=(props)=>{   // form the campornets props in JSX come over here and make sure it comes to props as js object 
     const {resData}=props;   //inside the  jsx element resData should be the name of the props 
@@ -43,7 +45,13 @@ const RestaurantCard=(props)=>{   // form the campornets props in JSX come over 
                         group-hover:text-blue-600">{resData.title}</h2>
               <p className="mb-1 text-lg font-semibold text-green-600"> Rs.{resData.price} only</p>
               <p className="text-sm text-gray-500">{resData.quantity} items available</p>
-              <button className="mt-auto
+              <button
+                        onClick={(event)=>{
+                          event.preventDefault();
+                          event.stopPropagation();
+                          appStore.dispatch(addItem(resData));
+                        }}
+                        className="mt-auto
                         w-full
                         rounded-xl
                         bg-gray-900
@@ -55,7 +63,7 @@ const RestaurantCard=(props)=>{   // form the campornets props in JSX come over 
                         transition-all
                         duration-200
                         hover:bg-blue-600
-                        active:scale-[0.98]" type="button">Order Now</button>
+                        active:scale-[0.98]" type="button">Add to cart</button>
           </CardLink>
       )
   }

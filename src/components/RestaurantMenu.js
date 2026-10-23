@@ -2,9 +2,12 @@ import { useEffect ,useState} from "react";
 import ShrimmerTwo from "./ShrimmerTwo";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice.js";
 const RestaurantMenu = () => {
 
     const {resId} = useParams();
+    const dispatch = useDispatch();
     
     const resInfo = useRestaurantMenu(resId);
     console.log("this is the resInfo",resInfo);
@@ -35,7 +38,12 @@ const RestaurantMenu = () => {
                 <h3 className="menu-price">RS. {price} only 👌👌</h3>
             </div>
             <p className="menu-description">{description}</p>
-            <button className="menu-order-btn">Order Now</button>
+            <button
+                className="menu-order-btn"
+                onClick={() => dispatch(addItem(resInfo))}
+            >
+                Add to cart
+            </button>
             <ul>
                 <h3 className="menu-reviews">latest reviews of the customers</h3>
                 <li>{rating}</li>

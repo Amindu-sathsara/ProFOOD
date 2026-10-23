@@ -255,18 +255,6 @@ img, video {
   position: relative;
 }
 
-.left-3 {
-  left: .75rem;
-}
-
-.top-3 {
-  top: .75rem;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
 .m-2 {
   margin: .5rem;
 }
@@ -275,12 +263,12 @@ img, video {
   margin: 1rem;
 }
 
-.mb-2 {
-  margin-bottom: .5rem;
-}
-
 .mb-1 {
   margin-bottom: .25rem;
+}
+
+.mb-2 {
+  margin-bottom: .5rem;
 }
 
 .mt-auto {
@@ -332,10 +320,6 @@ img, video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .justify-between {
@@ -411,21 +395,6 @@ img, video {
   background-color: rgb(52 211 153 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
-}
-
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
@@ -453,10 +422,6 @@ img, video {
   padding: 1.5rem;
 }
 
-.p-3 {
-  padding: .75rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -477,21 +442,6 @@ img, video {
   padding-bottom: .75rem;
 }
 
-.px-3 {
-  padding-left: .75rem;
-  padding-right: .75rem;
-}
-
-.py-1\.5 {
-  padding-top: .375rem;
-  padding-bottom: .375rem;
-}
-
-.px-2 {
-  padding-left: .5rem;
-  padding-right: .5rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -499,11 +449,6 @@ img, video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-lg {
@@ -516,9 +461,9 @@ img, video {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: .75rem;
-  line-height: 1rem;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -529,26 +474,13 @@ img, video {
   font-weight: 600;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .leading-tight {
   line-height: 1.25;
 }
 
-.tracking-wide {
-  letter-spacing: .025em;
-}
-
-.text-lime-400 {
+.text-gray-500 {
   --tw-text-opacity: 1;
-  color: rgb(163 230 53 / var(--tw-text-opacity, 1));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-900 {
@@ -561,14 +493,14 @@ img, video {
   color: rgb(22 163 74 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-500 {
+.text-lime-400 {
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+  color: rgb(163 230 53 / var(--tw-text-opacity, 1));
 }
 
-.text-amber-700 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(180 83 9 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .shadow-md {
@@ -593,16 +525,20 @@ img, video {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
 .transition-transform {
   transition-property: transform;
   transition-duration: .15s;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-duration: .15s;
-  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+.duration-200 {
+  transition-duration: .2s;
 }
 
 .duration-300 {
@@ -611,10 +547,6 @@ img, video {
 
 .duration-500 {
   transition-duration: .5s;
-}
-
-.duration-200 {
-  transition-duration: .2s;
 }
 
 .header {
@@ -962,14 +894,14 @@ li {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-blue-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:shadow-xl:hover {
