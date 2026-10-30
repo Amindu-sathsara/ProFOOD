@@ -271,6 +271,10 @@ img, video {
   margin-bottom: .5rem;
 }
 
+.mt-2 {
+  margin-top: .5rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -290,6 +294,10 @@ img, video {
   height: 2.5rem;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -298,12 +306,20 @@ img, video {
   width: 5rem;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-full {
   width: 100%;
 }
 
 .max-w-\[320px\] {
   max-width: 320px;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .flex-grow {
@@ -330,10 +346,20 @@ img, video {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -404,6 +430,10 @@ img, video {
   --tw-gradient-from: #a3a3a3 var(--tw-gradient-from-position);
   --tw-gradient-to: #a3a3a300 var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.object-contain {
+  object-fit: contain;
 }
 
 .object-cover {
@@ -949,5 +979,11 @@ li {
 .group:hover .group-hover\:text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+
+@media (width >= 768px) {
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

@@ -1,10 +1,14 @@
 import React from 'react';
 //import { useParams } from 'react-router-dom';
-import useCart from '../utils/useCart';
+import useCart from '../utils/useCart.js';
 
-
+import { useSelector } from 'react-redux';
 const Cart = () => {
     //const {cartId}=useParams();
+
+    const cartItems= useSelector((store)=>store.cart.cartItems);
+    console.log("This is the current cart items that you can see in cart page"+cartItems);
+    
 
     const cartInfo=useCart();
 

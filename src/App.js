@@ -13,6 +13,7 @@ import Error from './components/Error';
 import Body from './components/Body';
 
 import UserContextMock from './utils/UserContextMock';
+import Cart from './components/Cart';
 
 import { createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom';
 
@@ -73,6 +74,10 @@ const appRouter=createBrowserRouter([
             {
                 "path": "/Cart1",
                 "element":<Cart1/>
+            },
+            {
+                "path": "/Cart",
+                "element":<Cart/>
             },
             {
                 "path":"/Mart",

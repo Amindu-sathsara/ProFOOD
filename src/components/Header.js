@@ -8,6 +8,7 @@ import UserContextMock from "../utils/UserContextMock";
 
 
 import { useSelector } from "react-redux";
+//import {items} from "../utils/cartSlice.js"
 const Header=()=>{
     //let Login="Login" here
     const [LoginBtn,setLoginBtn]=useState("Login");
@@ -19,6 +20,7 @@ const Header=()=>{
     
     //subscribing to the store using selector 
     const cartItems=useSelector((store)=>store.cart.items);
+    console.log("Current Cart items"+ cartItems);
     return (
         <div className="header">
             <div className="logo-container">
@@ -32,6 +34,7 @@ const Header=()=>{
                     <li><Link to="/About">About</Link></li>
                     <li><Link to="/Contact">Contact us</Link></li>
                     <li ><Link to="/Cart1">cart🛒{cartItems.length} items</Link></li>
+                    {/*<li ><Link to="/Cart">cart🛒{cartItems.length} items</Link></li>*/}
 {/*<li className="p-2 font-bold m-2">cart🛒{cartItems.length} (Items) </li>*/}
                     <li><Link to="/Mart">Mart</Link></li>
                     <button className="login-btn" onClick={()=>{
